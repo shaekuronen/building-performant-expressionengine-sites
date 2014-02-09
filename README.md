@@ -1,4 +1,4 @@
-### \#pEEfmatters - Building Mobile Optimized ExpressionEngine Sites
+### \#pEErfmatters - Building Mobile Optimized ExpressionEngine Sites
 ============================
 
 
