@@ -1,10 +1,22 @@
 [
     "intro.html",
-    "welcome1.html",
-    "welcome2.html",
+    "title1.html",
+    "title2.html",
     "why-performance-matters.html",
     "benchmarks.html",
     "mobile-performance-issues.html",
     "mobile-performance-resources.html",
-    "mobile-performance-guidelines.html"
+    "mobile-performance-guidelines.html",
+    "build-strategy.html",
+    "automin.html",
+    "automin-code.html",
+    "automin-result.html",
+    "picturefill.html",
+    "picturefill-code.html",
+    "picturefill-result.html",
+    "ee-file-manager-config.html",
+    "jquery-lazyload.html",
+    "jquery-lazyload-code.html",
+    "jquery-lazyload-result.html",
+    "ce-cache-config.html"
 ]

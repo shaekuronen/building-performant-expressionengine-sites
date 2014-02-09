@@ -1,0 +1,116 @@
+<h2>AutoMin Code</h2>
+
+<pre>
+<code>
+
+  <!-- HEAD -->
+  <!-- css -->
+  {exp:automin:css
+    attribute:rel="stylesheet"
+  }
+  <!-- reset -->
+  <link rel="stylesheet" href="/assets/css/vendor/reset/base.css" />
+  <!-- end reset -->
+
+  <!-- vendor -->
+  <link rel="stylesheet" href="/assets/css/vendor/flexslider.css" />
+  <!-- end vendor -->
+
+  <!-- site -->
+  <link rel="stylesheet" href="/assets/css/site/global/globals.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/header.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/footer.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/hero_image.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/callouts.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/featured_games.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/flip_animation.css" />
+  <link rel="stylesheet" href="/assets/css/site/global/diagonal_lines_bg.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/home.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/team.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/games.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/careers.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/press.css" />
+  <link rel="stylesheet" href="/assets/css/site/pages/santa.css" />
+  <!-- end site -->
+
+  <!-- responsive -->
+  <link rel="stylesheet" href="/assets/css/site/responsive/skeleton.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/0_500px.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/500_750px.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/750_1000px.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/1000_1250px.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/1250_infinity.css" />
+  <link rel="stylesheet" href="/assets/css/site/responsive/retina_display.css" />
+  <!-- end responsive -->
+  {/exp:automin:css}
+  <!-- end css -->
+  <!-- END HEAD -->
+
+  <!-- FOOTER -->
+  <!-- js -->
+
+  {exp:automin:js}
+  <!-- vendor -->
+  <script type="text/javascript" src="/assets/js/vendor/jquery-1.10.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/jquery.flexslider-min.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/matchMedia.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/picturefill.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/jquery.lazyload.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/prevent_console_errors.js"></script>
+  <script type="text/javascript" src="/assets/js/vendor/ios-orientationchange-fix.js"></script>
+  <!-- end vendor -->
+
+  <!-- site -->
+  <script type="text/javascript" src="/assets/js/site/global_object.js"></script>
+  <script type="text/javascript" src="/assets/js/site/lazyload_init.js"></script>
+  <script type="text/javascript" src="/assets/js/site/thought_bubbles.js"></script>
+  <script type="text/javascript" src="/assets/js/site/flexslider_init.js"></script>
+  <script type="text/javascript" src="/assets/js/site/header_nav_mobile.js"></script>
+  <script type="text/javascript" src="/assets/js/site/featured_games.js"></script>
+  <script type="text/javascript" src="/assets/js/site/nav_hover.js"></script>
+  <script type="text/javascript" src="/assets/js/site/remove_empty_text_nodes.js"></script>
+  <script type="text/javascript" src="/assets/js/site/scroll_to_element.js"></script>
+  <script type="text/javascript" src="/assets/js/site/modal.js"></script>
+  <script type="text/javascript" src="/assets/js/site/vertically_center.js"></script>
+  <!-- end site -->
+  {/exp:automin:js}
+
+  <!-- page specific js -->
+  {if embed:page_specific_js}
+    {embed:page_specific_js}
+  {/if}
+  <!-- end page specific js -->
+
+  <!-- end js -->
+  <!-- END FOOTER -->
+
+  <!-- LAYOUT -->
+  {embed="globals/head"
+
+    page_body_class="page-careers"
+
+  }
+
+  {embed="globals/header"}
+
+  {embed="globals/hero_image"}
+
+  {embed="careers/callout1"}
+
+  {embed="careers/benefits_and_perks"}
+
+  {embed="careers/open_positions"}
+
+  {embed="globals/footer"}
+
+  {embed="globals/scripts"
+
+    page_specific_js='<script type="text/javascript" src="path/to/file.js"></script>'
+
+  }
+
+  {embed="globals/foot"}
+
+</code>
+</pre>

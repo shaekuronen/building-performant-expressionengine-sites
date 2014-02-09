@@ -19,6 +19,14 @@
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="bower_components/reveal.js/lib/css/zenburn.css" id="highlight-theme">
 
+        <!-- css overrides -->
+        <style>
+        .reveal pre code {
+
+        }
+        </style>
+        <!-- end css overrides -->
+
         <!-- If the query includes 'print-pdf', use the PDF print sheet -->
         <script>
           document.write( '<link rel="stylesheet" href="bower_components/reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
@@ -62,6 +70,8 @@
                 progress: true,
                 history: true,
                 center: true,
+                width: 1200,
+                height: 800,
 
                 theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
                 transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none

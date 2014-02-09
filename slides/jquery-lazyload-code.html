@@ -1,0 +1,33 @@
+<h2>jQuery Lazyload Code</h2>
+
+<pre><code>
+
+  <!-- callout1 -->
+  <div class="callout-copy-left-image-right gradient-border">
+
+    {exp:channel:entries
+      channel="callouts"
+      url_title="games-page-callout-1"
+      disable="categories|category_fields|member_data|pagination"
+      dynamic="no"
+    }
+    <div class="container">
+
+      <div class="two-thirds column">
+        <h1>{callout_heading}</h1>
+        <p>{callout_body_copy}</p>
+      </div>
+
+      <div class="callout-image one-third column">
+        <a href="{callout_link_url}" target="_blank">
+          <img class="lazyload" src="/assets/img/global/lazyload/transparent.gif" data-original="{callout_image}"  width="280" height="280">
+        </a>
+      </div>
+
+    </div>
+    {/exp:channel:entries}
+
+  </div>
+  <!-- end callout1 -->
+
+</code></pre>

@@ -1,0 +1,47 @@
+<h2>Picturefill Code</h2>
+
+<pre><code>
+
+  <!-- hero image -->
+  <div class="hero-image-wrapper">
+
+    <div class="container">
+
+      {exp:channel:entries
+        channel="hero_images"
+        search:hero_image_page_visibility="{segment_1}"
+        limit="1"
+        disable="categories|category_fields|member_data|pagination"
+        dynamic="no"
+      }
+      <a href="{hero_image_url}" class="hero-image-link">
+
+        <!-- responsive images using picturefill.js -->
+        <span data-picture data-alt="" class="hero-image">
+
+          <!-- for browsers that don't support media queries fallback to full size image -->
+          <span class="hero-image" data-src="{hero_image:1000px}"></span>
+          <!-- end for browsers that don't support media queries fallback to full size image -->
+
+          <span class="hero-image" data-src="{hero_image:500px}"  data-media="(max-width: 499px)"></span>
+          <span class="hero-image" data-src="{hero_image:750px}"  data-media="(min-width: 500px) and (max-width: 749px)"></span>
+          <span class="hero-image" data-src="{hero_image:1000px}" data-media="(min-width: 750px)"></span>
+
+          <!-- fallback for non-js browsers -->
+          <noscript>
+            <img src="{hero_image:thumbs}" alt="">
+          </noscript>
+          <!-- end fallback for non-js browsers -->
+
+        </span>
+        <!-- end responsive images using picturefill.js -->
+
+      </a>
+      {/exp:channel:entries}
+
+    </div>
+
+  </div>
+  <!-- end hero image -->
+
+</code></pre>
