@@ -5,7 +5,6 @@
     "why-performance-matters.html",
     "benchmarks.html",
     "mobile-performance-issues.html",
-    "mobile-performance-resources.html",
     "mobile-performance-guidelines.html",
     "build-strategy.html",
     "automin.html",
@@ -18,5 +17,6 @@
     "jquery-lazyload.html",
     "jquery-lazyload-code.html",
     "jquery-lazyload-result.html",
-    "ce-cache-config.html"
+    "ce-cache-config.html",
+    "mobile-performance-resources.html"
 ]
