@@ -1,3 +1,48 @@
 <h2>CE Cache Config</h2>
 
-<p>Please change me!</p>
+<a href="http://www.causingeffect.com/software/expressionengine/ce-cache/user-guide/installation">CE Cache Docs</a>
+
+<h4>Installation</h4>
+
+<ul>
+    <li>Add + Enable Module</li>
+    <li>Create system/expressionengine/cache directory and set permissions to 777</li>
+    <li>Upload _static_cache_handler.php to the root directory</li>
+    <li>Add the <code>{exp:ce_cache:stat:ic}</code> tag to a template on each page</li>
+    <li>Add mod_rewrite rules below to .htaccess</li>
+</ul>
+
+<pre><code>
+
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    #------------------- remove trailing slash -------------------
+    RewriteCond %{REQUEST_URI} !^/system [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)/$ /$1 [R=301,L,QSA]
+
+    #------------------- index.php -------------------
+    #strip index.php from the URL if that is all that is given
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.php\ HTTP/
+    RewriteRule ^(([^/]+/)*)index\.php$ http://%{HTTP_HOST}/ [R=301,NS,L,QSA]
+    #strip index.php/* from the URL
+    RewriteCond %{THE_REQUEST} ^[^/]*/index\.php/ [NC]
+    RewriteRule ^index\.php/(.+) http://%{HTTP_HOST}/$1 [R=301,L,QSA]
+
+    #------------------- CE Cache Static Driver -------------------
+    RewriteCond %{REQUEST_URI} !^/system [NC]
+    RewriteCond %{QUERY_STRING} !ACT|URL [NC]
+    RewriteCond %{REQUEST_METHOD} !=POST [NC]
+    RewriteCond %{DOCUMENT_ROOT}/static/ce_cache/e24b65/static%{REQUEST_URI}/index\.html -f
+    RewriteRule (.*) /_static_cache_handler.php%{REQUEST_URI}/index\.html [L,QSA]
+
+    #------------------- EE -------------------
+    #rewrite all non-image/js/css urls back to index.php if they are not files or directories
+    RewriteCond $1 !\.(css|js|gif|jpe?g|png) [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.php/$1 [L,QSA]
+  </IfModule>
+
+</code></pre>
