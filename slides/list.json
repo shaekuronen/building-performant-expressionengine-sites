@@ -1,5 +1,4 @@
 [
-    "intro.html",
     "title1.html",
     "title2.html",
     "why-performance-matters.html",
@@ -18,5 +17,6 @@
     "jquery-lazyload-code.html",
     "jquery-lazyload-result.html",
     "ce-cache-config.html",
-    "mobile-performance-resources.html"
+    "resources.html",
+    "contact-info.html"
 ]
