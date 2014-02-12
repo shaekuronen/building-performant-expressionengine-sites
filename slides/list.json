@@ -16,8 +16,11 @@
     "jquery-lazyload.html",
     "jquery-lazyload-code.html",
     "jquery-lazyload-result.html",
-    "ce-cache-config.html",
+    "ce-cache.html",
+    "ce-cache-installation.html",
+    "ce-cache-htaccess.html",
+    "ce-cache-config.php.html",
+    "ce-cache-breaking-rules.html",
     "resources.html",
-    "contact-info.html",
-    "ce-cache.html"
+    "contact-info.html"
 ]
